@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/collection/collection",
+    "pages/accountMangement/accountMangement",
+    "pages/poetry/poetry",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/recite/recite",
+    "pages/poemDetail/poemDetail",
+    "pages/authorDetail/authorDetail",
+    "pages/login/login",
+    "pages/registe/registe",
+    "pages/poemlist/poemlist",
+    "pages/poemlistSearch/poemlistSearch"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#d3cdb7",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#2c3f46",
+    "borderStyle": "black",
+    "backgroundColor": "#d3cdb7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/day.png",
+        "selectedIconPath": "images/dayok.png",
+        "text": "日荐"
+      },
+      {
+        "pagePath": "pages/poetry/poetry",
+        "iconPath": "images/poem.png",
+        "selectedIconPath": "images/poemok.png",
+        "text": "诗词"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/userok.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

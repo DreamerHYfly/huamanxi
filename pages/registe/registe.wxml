@@ -1,0 +1,72 @@
+<!--pages/registe/registe.wxml-->
+<view class="registe">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section weui-cells__group_form">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <label class="weui-label">用户名</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="userName" class="weui-input {{ userName == true ? 'userError' : ''}}" type="text" maxlength="11" placeholder="请输入您要注册的用户名" bindblur="userCheck"/>
+        </view>
+        <view class="cell-check {{userCheckShow?'':'hide'}}">
+          用户名必须为3-10位字母、数字、下划线
+        </view>
+        <view class="cell-check {{userExist?'':'hide'}}">
+          用户名已存在
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <label class="weui-label">密码</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="userPassword" class="weui-input {{ userPassword == true ? 'userError' : ''}}" type="text" password maxlength="100" placeholder="请输入您要注册的密码" bindblur="passwordCheck"/>
+        </view>
+        <view class="cell-check {{passwordCheckShow?'':'hide'}}">
+          密码必须为6-12位字母、数字、下划线
+        </view>
+        
+      </view>
+
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <label class="weui-label">确认密码</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="userRePassword" class="weui-input {{ userPassword == true ? 'userError' : ''}}" type="text" password maxlength="100" placeholder="请再输入要注册的密码" bindblur="passwordReCheck"/>
+        </view>
+        <view class="cell-check {{passwordReCheckShow?'':'hide'}}">
+          两次密码不一致
+        </view>
+      </view>
+
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <label class="weui-label">邮箱</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="userEmail" class="weui-input" type="email" placeholder="请输入手机号" value="1658101741@qq.com" placeholder-class="weui-input__placeholder" bindblur="emailCheck"/>
+        </view>
+        <view class="cell-check {{emailCheck?'':'hide'}}">
+          请输入合法邮箱
+        </view>
+      </view>
+      <view class="weui-cells weui-cells_radio">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="weui-cell" wx:for="{{sex}}" wx:key="name">
+            <view class="weui-cell__bd">
+              <view>{{item.value}}</view>
+            </view>
+            <view class="weui-cell__ft">
+              <radio class="weui-check" value="{{item.name}}" checked="{{item.checked}}" />
+              <i class="weui-icon-checked"></i>
+            </view>
+          </label>
+        </radio-group>
+      </view>
+      <view class="weui-cells__title layout" bindtap="toLogin">登录</view>
+    </view>
+    <button type="default" formType="submit" hover-class="other-button-hover"> 注册 </button>
+  </form>
+</view>

@@ -1,0 +1,63 @@
+<!--pages/search/search.wxml-->
+
+<view>
+  <view>
+    <view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}">
+      <form class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="search" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </form>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view>
+  <view class="titletype">
+    <view data-id="type1" class="son2" style="height: {{imgType1?'auto':'40px'}};">
+      <view class="sleft">
+        <span>类型:</span>
+      </view>
+      <view class="sright">
+        <a wx:for="{{sceneryType}}" wx:key="i" bindtap="toSearchTag" data-text="{{item}}">{{item}}</a>
+      </view>
+      <view class="sright2">
+        <image class="img {{imgType1?'rotate':''}}" style="width:12px;height:12px;" src="/images/jianTop.png" mode="aspectFit" data-id="imgType1" bindtap="selectShow"></image>
+      </view>
+    </view>
+    <view data-id="type2" class="son2" style="height: {{imgType2?'auto':'40px'}};">
+      <view class="sleft">
+        <span>作者:</span>
+      </view>
+      <view class="sright">
+        <a wx:for="{{authorType}}" wx:key="i" bindtap="toSearchAuthor" data-text="{{item}}">{{item}}</a>
+      </view>
+      <view class="sright2">
+        <image class="img {{imgType2?'rotate':''}}" style="width:12px;height:12px;" src="/images/jianTop.png" mode="aspectFit" data-id="imgType2" bindtap="selectShow"></image>
+      </view>
+    </view>
+    <view data-id="type3" class="son2" style="height:{{imgType3?'auto':'40px'}};">
+      <view class="sleft">
+        <span>朝代:</span>
+      </view>
+      <view class="sright">
+        <a wx:for="{{dynastyType}}" wx:key="i" bindtap="toSearchDynasty" data-text="{{item}}">{{item}}</a>
+      </view>
+      <view class="sright2">
+        <image class="img {{imgType3?'rotate':''}}" style="width:12px;height:12px;" src="/images/jianTop.png" mode="aspectFit" data-id="imgType3" bindtap="selectShow"></image>
+      </view>
+    </view>
+
+  </view>
+</view>

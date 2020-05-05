@@ -1,0 +1,87 @@
+/**index.wxss**/
+
+
+
+page {
+  background-color: #d3cdb7;
+}
+
+h3, h4, p {
+  color: #000 !important;
+}
+
+.ci-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dynastyAuthor {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.first, .second {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  vertical-align: middle;
+  border: 2px solid #665000;
+  border-radius: 4px;
+  /* background-color: rgba(211, 205, 183, .8); */
+}
+
+.shi {
+  display: flex;
+  flex-direction: column;
+  margin:  auto;
+  width: 90%;
+  overflow: auto;
+  max-height: 40vh;
+  -ms-scroll-chaining: chained;
+  -ms-overflow-style: none;
+  -ms-content-zooming: zoom;
+  -ms-scroll-rails: none;
+  -ms-content-zoom-limit-min: 100%;
+  -ms-content-zoom-limit-max: 500%;
+  -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+  text-align: center;
+}
+
+.shi::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.shi::-moz-scrollbar {
+  display: none;
+}
+
+.shi>p {
+  text-indent: 2em;
+  display: block;
+}
+
+.newTime {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+}
+
+.poem-box {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.poem-box .shi {
+  flex: 1;
+}
+
+

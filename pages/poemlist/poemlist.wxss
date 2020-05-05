@@ -1,0 +1,111 @@
+/* pages/poemlist/poemlist.wxss */
+
+.hide {
+  display: none !important;
+}
+
+.sons {
+  margin: 0 auto;
+  height: auto;
+  clear: both;
+  background-color: #ecebd9;
+  overflow: hidden;
+  margin-top: 20px;
+  border: 1px solid #c8c7bc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.poem-title {
+  text-align: center;
+}
+
+.poem-title text {
+  font-size: 20px;
+}
+
+.poem-author {
+  text-align: center;
+  margin-left: -10px;
+}
+
+.poem-author text {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.poem-content {
+  text-align: center;
+  margin-bottom: 20pt;
+  line-height: 2em;
+}
+
+.poem-title {
+  margin-top: 10px;
+}
+
+.poem-content text {
+  width: 80%;
+  height: 75px;
+  display: block;
+  margin: 0 auto;
+}
+
+.paging {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.pager {
+  padding-left: 0;
+  margin: 20px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.pager .li>.a:focus, .pager .li>.a:hover {
+  text-decoration: none;
+  background-color: #f0e5bd;
+}
+
+.pager:before {
+  display: table;
+  content: " ";
+}
+
+.pager .li {
+  display: inline;
+}
+
+.pager .previous>.a, .pager .previous>.span {
+  float: left;
+}
+
+.pager .next>.a, .pager .next>.span {
+  float: right;
+}
+
+.pager .li>.a, .pager .li>.span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #f0ebd8;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.a {
+  color: #2c3f46;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.a {
+  background-color: transparent;
+}
+
+.span {
+  display: inline;
+}

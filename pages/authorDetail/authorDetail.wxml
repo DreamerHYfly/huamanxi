@@ -1,0 +1,20 @@
+<view class="author-box">
+  <image src="{{authorImg}}" class="author-img" mode="aspectFit" binderror="reSetImage"></image>
+  <view class="author-name">{{authorName}}</view>
+  <view class='collect'>
+    <image class="collection" bindtap="isCollectionAuthor" mode="aspectFit" src="{{isCollectionAuthor==1?'/images/shoucang.png':'/images/shoucangok.png'}}"></image>
+    <image class="collection" bindtap="doTTS" mode="aspectFit" src="{{audioCount%2==0?'/images/speaker.png':'/images/speakerOk.png'}}"></image>
+  </view>
+  <view class="authordesc">
+    <view class="authordesc-trim">诗人简介</view>
+    <view class="authordesc-content">
+      <text>{{authordescContent}}</text>
+    </view>
+  </view>
+  <view class="authorIntroduce">
+    <view class="authorIntroduce-trim">诗人介绍</view>
+    <view class="authorIntroduce-content">
+      <text>{{authorIntroduceContent}}</text>
+    </view>
+  </view>
+</view>

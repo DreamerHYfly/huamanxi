@@ -1,0 +1,33 @@
+<view class="poetry">
+  <view class="nav">
+    <image class="nav-logo" src="../../images/logo.png"></image>
+    <view class="newTime">{{date}}</view>
+    <image class="search" src="../../images/search.png" bindtap="allSearch"></image>
+  </view>
+  <!-- 导航区域 -->
+  <view class="tab">
+    <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">诗词</view>
+    <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">诗人</view>
+    <view class="tab-item {{tab==2?'active':''}}" bindtap="changeItem" data-item="2">名句</view>
+  </view>
+  <!-- 内容区域 -->
+  <view class="content">
+    <swiper current="{{item}}" bindchange="changeTab">
+      <swiper-item>
+        <scroll-view scroll-y>
+          <include src="poetry-con.wxml"></include>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y>
+          <include src="poetry-poety.wxml"></include>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y>
+          <include src="poetry-rhesis.wxml"></include>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

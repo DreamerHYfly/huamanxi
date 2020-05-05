@@ -1,0 +1,361 @@
+/* pages/collection/collection.wxss */
+
+.poetry {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #d3cdb7;
+  color: #2c3f46;
+  height: 100%;
+  width: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.tab {
+  display: flex;
+}
+
+.tab-item {
+  flex: 1;
+  font-size: 10pt;
+  text-align: center;
+  line-height: 72rpx;
+  border-bottom: 6rpx solid #725a00;
+}
+
+.content {
+  flex: 1;
+}
+
+.content > swiper {
+  height: 100%;
+}
+
+.tab-item.active {
+  color: #d3cdb7;
+  background-color: #2c3f46;
+  border-bottom-color: #2c3f46;
+}
+
+.sons {
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  clear: both;
+  background-color: #ecebd9;
+  overflow: hidden;
+  margin-top: 20px;
+  border: 1px solid #c8c7bc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.poem-title {
+  text-align: center;
+}
+
+.poem-title text {
+  font-size: 25px;
+}
+
+.poem-author {
+  text-align: center;
+  margin-left: -10px;
+}
+
+.poem-author text {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.poem-content {
+  text-align: center;
+  margin-bottom: 20pt;
+}
+
+.poem-title {
+  margin-top: 10px;
+}
+
+.poem-content text {
+  width: 80%;
+}
+
+.tab-select {
+  margin: 10px auto;
+  display: flex;
+  width: 100%;
+}
+
+.tab-select .options {
+  text-align: center;
+  flex: 1;
+}
+
+.tab-select .options image {
+  width: 60%;
+}
+
+.sonspic .tab-select .options image {
+  width: 35%;
+}
+
+.poem-all {
+  max-height: 45vh;
+  margin-bottom: 10px;
+}
+
+.peom-all .cont {
+  height: 100%;
+}
+
+.poem-additional {
+  margin-bottom: 10pt;
+}
+
+.poem-additional h4 {
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+.poem-additional view {
+  width: 80%;
+  text-indent: 2em;
+  margin: 2px auto;
+}
+
+.poem-annotation {
+  margin-bottom: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.poem-title {
+  text-align: center;
+}
+
+.poem-title text {
+  font-size: 25px;
+}
+
+.poem-author {
+  text-align: center;
+  margin-left: -10px;
+}
+
+.poem-author text {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.poem-content {
+  text-align: center;
+  margin-bottom: 20pt;
+  line-height: 2em;
+}
+
+.poem-content text {
+  height: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.poem-title {
+  margin-top: 10px;
+}
+
+.tab-select {
+  margin: 10px auto;
+  display: flex;
+  width: 100%;
+}
+
+.tab-select .options {
+  text-align: center;
+  flex: 1;
+}
+
+.tab-select .options image {
+  width: 60%;
+}
+
+.sonspic .tab-select .options image {
+  width: 35%;
+}
+
+.poem-all {
+  max-height: 45vh;
+  margin-bottom: 10px;
+}
+
+.peom-all .cont {
+  height: 100%;
+}
+
+.poem-additional {
+  margin-bottom: 10pt;
+}
+
+.poem-additional h4 {
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+.poem-additional view {
+  width: 80%;
+  text-indent: 2em;
+  margin: 2px auto;
+}
+
+.poem-annotation {
+  margin-bottom: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* poetry start */
+
+.sonspic {
+  position: relative;
+  height: auto;
+  clear: both;
+  background-color: #f0efe2;
+  overflow: hidden;
+  border: 1px solid #c8c7bc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.sonspic .cont {
+  text-align: center;
+}
+
+.author-name {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.author-information {
+  height: 40vh;
+  text-align: center !important;
+  margin-bottom: 10px;
+}
+
+.author-content {
+  width: 80%;
+  text-indent: 2em;
+  margin: 2px auto;
+  line-height: 1.5em;
+}
+
+.author-content text {
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.author-con-title {
+  text-indent: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sons .cout .sentence {
+  width: 95%;
+  text-indent: 2em;
+  margin-bottom: 5px;
+  margin: 10px auto;
+  padding-bottom: 5px;
+}
+
+.sons .cout .sentence:last-child {
+  border-bottom: none;
+}
+
+scroll-view {
+  height: 100%;
+}
+
+.paging {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.pager {
+  padding-left: 0;
+  margin: 20px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.pager .li>.a:focus, .pager .li>.a:hover {
+  text-decoration: none;
+  background-color: #f0e5bd;
+}
+
+.pager:before {
+  display: table;
+  content: " ";
+}
+
+.pager .li {
+  display: inline;
+}
+
+.pager .previous>.a, .pager .previous>.span {
+  float: left;
+}
+
+.pager .next>.a, .pager .next>.span {
+  float: right;
+}
+
+.pager .li>.a, .pager .li>.span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #f0ebd8;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.a {
+  color: #2c3f46;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.a {
+  background-color: transparent;
+}
+
+.span {
+  display: inline;
+}

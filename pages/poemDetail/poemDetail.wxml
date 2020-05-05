@@ -1,0 +1,81 @@
+<!--pages/poemDetail/poemDetail.wxml-->
+
+<view class="sons">
+  <view class="tab-select">
+    <view class="options" data-index="7" bindtap="thisSelect">
+      <image mode="widthFix" src="{{mainBody?'/images/mainBodyok.png':'/images/mainBody.png'}}"></image>
+    </view>
+    <view class="options" data-index="1" bindtap="thisSelect">
+      <image mode="widthFix" src="{{poemBackground?'/images/beijing2.png':'/images/beijing.png'}}"></image>
+    </view>
+    <view class="options" data-index="2" bindtap="thisSelect">
+      <image mode="widthFix" src="{{poemAppreciation?'/images/shangpic2.png':'/images/shangpic.png'}}"></image>
+    </view>
+    <view class="options" data-index="3" bindtap="thisSelect">
+      <image mode="widthFix" src="{{poemAnnotation?'/images/yizhu2.png':'/images/yizhu.png'}}"></image>
+    </view>
+    <view class="options" data-index="4" bindtap="thisSelect">
+      <image mode="widthFix" src="/images/author.png"></image>
+    </view>
+    <view class="options" data-index="5" bindtap="thisSelect">
+      <image mode="widthFix" src="/images/beisong.png"></image>
+    </view>
+  </view>
+
+
+  <view class="cont">
+    <scroll-view scroll-y class="poem-all">
+      <view class="title">
+        <view class="titleleft">
+          <text>相似古诗\n</text>
+        </view>
+        <view class="shititle">
+          <view class="title-box" wx:for="{{similarPoems}}" wx:key="poemId" wx:if="{{index<3}}">
+            <view class="poemPort" data-Id="{{item.poemId}}" bindtap="toPoemDetail">{{item.poemTitle}}</view>
+            <view class="poemPort-c">
+              <view class="poemPort">{{item.poemDynasty}}</view>
+              <view class="poemPort" data-Id="{{item.poemAuthorId}}" bindtap="toAuthorDetail">{{item.poemAuthor}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="collect">
+        <image class="collection" bindtap="isCollectionPoem" mode="aspectFit" src="{{isCollectionPoem==1?'/images/shoucang.png':'/images/shoucangok.png'}}"></image>
+        <image class="collection" bindtap="doTTS" mode="aspectFit" src="{{audioCount%2==0?'/images/speaker.png':'/images/speakerOk.png'}}"></image>
+      </view>
+      <view class="poem-background poem-additional {{mainBody?'':'hide'}}">
+        <view class="poem-title">
+          <text>{{poem.poemTitle}}</text>
+        </view>
+        <view class="poem-author">
+          <text>{{poem.poemDynasty}}</text>
+          <text>{{poem.poemAuthor}}</text>
+        </view>
+        <view class="poem-content">
+          <text>{{poem.poemContent}}</text>
+        </view>
+
+
+
+      </view>
+      <view class="poem-background poem-additional {{poemBackground?'':'hide'}}">
+        <h4>背景:</h4>
+        <view>
+          <text>{{poem.poemBackground}}</text>
+        </view>
+      </view>
+      <view class="poem-appreciation poem-additional {{poemAppreciation?'':'hide'}}">
+        <h4>赏析:</h4>
+        <view>
+          <text>{{poem.poemAppreciation}}</text>
+        </view>
+      </view>
+      <view class="poem-annotation poem-additional {{poemAnnotation?'':'hide'}}">
+        <h4>译文注释:</h4>
+        <view>
+          <text>{{poem.poemTranslation}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

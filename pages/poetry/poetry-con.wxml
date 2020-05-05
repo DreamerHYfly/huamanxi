@@ -1,0 +1,48 @@
+<!-- <image class="bg-img" mode="scaleToFill" src="/images/poetry-bg.png"></image> -->
+
+<view class="title">
+  <view class="titleleft">
+    <text>猜你喜欢\n</text>
+  </view>
+  <view class="shititle">
+    <view class="title-box" wx:for="{{guessYouLike}}" wx:key="poemId" wx:if="{{index<3}}">
+      <view class="poemPort" data-Id="{{item.poemId}}" bindtap="toPoemDetail">{{item.poemTitle}}</view>
+      <view class="poemPort-c">
+        <view class="poemPort">{{item.poemDynasty}}</view>
+        <view class="poemPort" data-Id="{{item.authorId}}" bindtap="toAuthorDetail">{{item.poemAuthor}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="sons" wx:for="{{poem}}" wx:key="poemId" data-Id='{{item.poemId}}' bindtap="toPoemDetail">
+  <view class="cont">
+    <view class="poem-title">
+      <text>{{item.poemTitle}}</text>
+    </view>
+    <view class="poem-author">
+      <text>{{item.peomDynasty}}</text>
+      <text>{{item.poemAuthor}}</text>
+    </view>
+    <view class="poem-content">
+      <text>{{item.poemContent}}</text>
+    </view>
+  </view>
+</view>
+
+
+<view class="paging">
+  <view class="ul pager">
+    <view class="li previous">
+      <view class="a {{poemElementNum==0?'hide':''}}" bindtap="prePoem">
+        <view class="span" aria-hidden="true">←</view> 上一页
+      </view>
+    </view>
+    <view class="li next">
+      <view class="a {{poemElementNum>=50?'hide':''}}" bindtap="nextPoem">下一页
+        <view class="span" aria-hidden="true">→</view>
+      </view>
+    </view>
+  </view>
+</view>

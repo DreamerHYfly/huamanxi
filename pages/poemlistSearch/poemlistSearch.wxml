@@ -1,0 +1,28 @@
+<!--pages/poemlist/poemlist.wxml-->
+
+<view class="sonspic" wx:for="{{author}}" wx:key='poemauthorId' data-id="{{item.authorId}}" bindtap="toAuthorDetail">
+  <view class="cont">
+    <view class="author-name">{{item.authorName}}</view>
+    <view class="author-content"><text>{{item.authorDesc}}</text></view>
+  </view>
+</view>
+
+<view class="sons" wx:for="{{poem}}" wx:key="poemId"  data-Id='{{item.poemId}}' bindtap="toPoemDetail">
+  <view class="cont">
+    <view class="poem-title">
+      <text>{{item.poemTitle}}</text>
+    </view>
+    <view class="poem-author">
+      <text>{{item.poemDynasty}}</text>
+      <text>{{item.poemAuthor}}</text>
+    </view>
+    <view class="poem-content">
+      <text>{{item.poemContent}}</text>
+    </view>
+  </view>
+</view>
+
+
+
+
+

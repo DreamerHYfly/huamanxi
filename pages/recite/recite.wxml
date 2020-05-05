@@ -1,0 +1,24 @@
+<!--pages/recite/recite.wxml-->
+
+<view class="poem-title">
+  <text>{{poem.poemTitle}}</text>
+</view>
+<view class="poem-author">
+  <text>{{poem.poemDynasty}}</text>
+  <text>{{poem.poemAuthor}}</text>
+</view>
+<view>
+  <textarea class="inputcon" bindinput="Refresh"></textarea>
+</view>
+<view>
+  <button class="default" bindtap="recitation">提交</button>
+</view>
+<view class="result">
+  <text>{{result}}</text>
+</view>
+<view class="answer">
+  <view class="an_notes" wx:for="{{answer}}" wx:key="error">
+    <text class="blue">{{item[0]}}</text>
+    <text>{{item[1]}}{{item[2]}}{{item[3]}}{{item[4]}}{{item[5]}}{{item[6]}}{{item[7]}}</text>
+  </view>
+</view>

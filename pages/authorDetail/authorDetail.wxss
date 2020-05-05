@@ -1,0 +1,70 @@
+/* pages/author/author.wxss */
+
+.collection {
+  width: 25px;
+  height: 25px;
+  margin: 10px auto;
+  z-index: 1;
+}
+
+.collect {
+  margin: 0 auto;
+  width: 100px;
+  display: flex;
+}
+
+.collect>image {
+  flex: 1;
+}
+
+.author-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.author-img {
+  height: 100px;
+}
+
+.author-name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.smallFunction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -50rpx;
+  margin-top: 50rpx;
+}
+
+.smallFunction view {
+  width: auto;
+  margin-left: 50rpx;
+  font-size: 14px;
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #eee;
+}
+
+.authordesc-trim, .authorIntroduce-trim {
+  color: #2c3f46;
+  padding-left: 30rpx;
+  border-left: 3px solid #2c3f46;
+  margin-left: 50rpx;
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}
+
+.authordesc-content, .authorIntroduce-content {
+  width: auto;
+  padding: 0 50rpx;
+}
+
+.authorIntroduce-content {
+  height: 80vh;
+  overflow: auto;
+}

@@ -1,0 +1,40 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+
+    <view class="section">
+
+      <view class="weui-cell ">
+        <view class="weui-cell__hd">
+          <label class="weui-label">用户名</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="userName" class="weui-input {{ userName ? 'userError' : ''}}" type="text" maxlength="11" placeholder="请输入您的用户名" bindblur="userCheck"/>
+        </view>
+        <view class="cell-check {{userCheckShow?'':'hide'}}">
+          用户名必须为3-10位字母、数字、下划线
+        </view>
+      </view>
+
+
+      <view class="weui-cell ">
+        <view class="weui-cell__hd">
+          <label class="weui-label">密码</label>
+        </view>
+        <view class="weui-cell__bd">
+         <input name="userPassword" class="weui-input {{ userPassword == true ? 'userError' : ''}}" type="text" password maxlength="100" placeholder="请输入您的密码" bindblur="passwordCheck"/>
+        </view>
+        <view class="cell-check {{passwordCheckShow?'':'hide'}}">
+          密码必须为6-12位字母、数字、下划线
+        </view>
+      </view>
+
+      <view class="weui-cells__title" bindtap="toRegiste">注册</view>
+    </view> 
+
+    
+    <button type="default" formType="submit" hover-class="other-button-hover"> 登录 </button>
+  </form>
+
+</view>

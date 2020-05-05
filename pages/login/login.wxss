@@ -1,0 +1,63 @@
+/* pages/login/login.wxss */
+
+page {
+  background-color: #d3cdb7;
+  font-size: 40rpx;
+}
+
+.hide {
+  display: none!important;
+}
+
+.weui-cell {
+  position: relative;
+}
+
+.cell-check {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  color: red;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  border: 1px solid #ddd;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 80%;
+  margin: 5% auto;
+  padding-left: 20rpx;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.button-hover {
+  background-color: #b02923;
+}
+
+/** 添加自定义button点击态样式类**/
+
+.other-button-hover {
+  background-color: #b02923;
+  color: #fff;
+}
+
+button {
+  background-color: #b02923;
+  color: #949080 !important;
+  top: 300rpx;
+  width: 80%;
+  margin-bottom: 50rpx;
+}
+
+.userError {
+  border-color: #b02923;
+}
+
+input {
+  border-radius: 5px;
+  background-color: #fff;
+}

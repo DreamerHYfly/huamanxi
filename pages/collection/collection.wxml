@@ -1,0 +1,23 @@
+<!--pages/collection/collection.wxml-->
+<view class="poetry">
+  <!-- 导航区域 -->
+  <view class="tab">
+    <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">诗词</view>
+    <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">诗人</view>
+  </view>
+  <!-- 内容区域 -->
+  <view class="content">
+    <swiper current="{{item}}" bindchange="changeTab">
+      <swiper-item>
+        <scroll-view scroll-y>
+          <include src="poetry-con.wxml"></include>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y>
+          <include src="poetry-poety.wxml"></include>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

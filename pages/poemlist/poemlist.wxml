@@ -1,0 +1,33 @@
+<!--pages/poemlist/poemlist.wxml-->
+<view class="sons" wx:for="{{poem}}" wx:key="poemId"  data-Id='{{item.poemId}}' bindtap="toPoemDetail">
+  <view class="cont">
+    <view class="poem-title">
+      <text>{{item.poemTitle}}</text>
+    </view>
+    <view class="poem-author">
+      <text>{{item.poemDynasty}}</text>
+      <text>{{item.poemAuthor}}</text>
+    </view>
+    <view class="poem-content">
+      <text>{{item.poemContent}}</text>
+    </view>
+  </view>
+</view>
+
+
+
+
+<view class="paging ">
+  <view class="ul pager">
+    <view class="li previous">
+      <view class="a {{elementNum==0?'hide':''}}" bindtap="pre">
+        <view class="span" aria-hidden="true">←</view> 上一页
+      </view>
+    </view>
+    <view class="li next">
+      <view class="a {{elementNum>=50?'hide':''}}" bindtap="next">下一页
+        <view class="span" aria-hidden="true">→</view>
+      </view>
+    </view>
+  </view>
+</view>

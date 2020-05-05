@@ -1,0 +1,24 @@
+<!-- <image class="bg-img" mode="scaleToFill" src="/images/poetry-bg.png"></image> -->
+<view class="sons" wx:for="{{rhesis}}" wx:key="poemId" data-id="{{item.poemId}}" bindtap="toRhesisDetail">
+  <view class="cout">
+    <view class="sentence">
+      {{item.rhesisContent}} —— {{item.authorName}}《{{item.poemTitle}}》
+    </view>
+  </view>
+</view>
+
+
+<view class="paging">
+  <view class="ul pager">
+    <view class="li previous">
+      <view class="a {{rhesisElementNum==0?'hide':''}}" bindtap="preRhesis">
+        <view class="span" aria-hidden="true">←</view> 上一页
+      </view>
+    </view>
+    <view class="li next">
+      <view class="a {{rhesisElementNum>=200?'hide':''}}" bindtap="nextRhesis">下一页
+        <view class="span" aria-hidden="true">→</view>
+      </view>
+    </view>
+  </view>
+</view>

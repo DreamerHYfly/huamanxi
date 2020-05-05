@@ -1,0 +1,181 @@
+/* pages/poemDetail/poemDetail.wxss */
+
+page {
+  background-color: #d3cdb7;
+}
+
+.collection {
+  width: 25px;
+  height: 25px;
+  margin: 10px auto;
+  z-index: 1;
+}
+
+.collect {
+  margin: 0 auto;
+  width: 100px;
+  display: flex;
+}
+
+.collect>image {
+  flex: 1;
+}
+
+.sons {
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
+  clear: both;
+  background-color: #d3cdb7;
+  overflow: hidden;
+  border: 1px solid #c8c7bc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.poem-title {
+  text-align: center;
+}
+
+.poem-title text {
+  font-size: 25px;
+}
+
+.poem-author {
+  text-align: center;
+  margin-left: -10px;
+}
+
+.poem-author text {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.poem-content {
+  text-align: center;
+  margin-bottom: 20pt;
+}
+
+.poem-title {
+  margin-top: 10px;
+}
+
+.poem-content text {
+  width: 80%;
+}
+
+.tab-select {
+  margin: 10px auto;
+  display: flex;
+  width: 100%;
+}
+
+.tab-select .options {
+  text-align: center;
+  flex: 1;
+}
+
+.tab-select .options image {
+  width: 60%;
+}
+
+.sonspic .tab-select .options image {
+  width: 35%;
+}
+
+.poem-all {
+  height: 86vh;
+  margin-bottom: 10px;
+}
+
+.peom-all .cont {
+  height: 100%;
+}
+
+.poem-additional {
+  margin: 20rpx 0;
+}
+
+.poem-additional h4 {
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+.poem-additional>view {
+  width: 80%;
+  margin: 2px auto;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.title {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 90%;
+  line-height: 50px;
+  font-size: 20px;
+  clear: both;
+  background-color: rgba(236, 235, 217);
+  overflow: hidden;
+  border: 1px solid #c5c8b9;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.titleleft {
+  height: 21px;
+  margin-left: 50rpx;
+  margin-top: 14px;
+  float: left;
+  clear: left;
+  border-left: 10rpx solid #2c3f46;
+}
+
+.titleleft text {
+  margin-top: -30rpx;
+  margin-left: 15rpx;
+  display: block;
+}
+
+.shititle {
+  clear: both;
+  line-height: 30px;
+  height: auto;
+  padding-bottom: 20px;
+  margin-left: 50rpx;
+  margin-top: 100rpx;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+  font-size: 36rpx;
+}
+
+.poemPort {
+  line-height: 18px;
+  color: #2c3f46;
+  margin-top: 10rpx;
+  width: 95%;
+  height: 1.1em;
+  overflow: hidden;
+}
+
+.poemPort-c {
+  display: flex;
+  width: 50%;
+}
+
+.poemPort-c .poemPort {
+  flex: 1;
+}

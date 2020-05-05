@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<!-- <rich-text node="{{html}}">{{html}}</rich-text> -->
+<!-- <web-view src="http://175.24.30.126:8089/huamanxi/"></web-view> -->
+<!-- <image class="bg-img" mode="scaleToFill" src="/images/bgday.jpg"></image> -->
+
+
+<view class="poem-box">
+  <view class="nav">
+    <image class="nav-logo" src="../../images/logo.png"></image>
+    <view class="newTime">{{date}}</view>
+    <image class="search" src="../../images/search.png" bindtap="allSearch"></image>
+  </view>
+
+  <view class="shi" wx:for="{{poem}}" wx:key="poemId" data-id="{{item.poemId}}" bindtap="toPoemDetail">
+    <h4 class="ci-title">{{item.poemTitle}}</h4>
+    <view class="dynastyAuthor">{{item.poemDynasty}} {{item.poemAuthor}}</view>
+    <view class="ci-con">
+      <text> {{item.poemContent}}</text>
+    </view>
+  </view>
+
+
+
+</view>

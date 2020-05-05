@@ -1,0 +1,49 @@
+/* pages/recite/recite.wxss */
+
+.poem-title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.poem-title text {
+  font-size: 25px;
+}
+
+.poem-author {
+  text-align: center;
+  margin-left: -10px;
+}
+
+.poem-author text {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.poem-content {
+  text-align: center;
+  margin-bottom: 20pt;
+}
+
+.poem-content text {
+  width: 80%;
+}
+
+.inputcon {
+  margin: 15px auto;
+  background-color: #e7e5de;
+}
+
+.answer, .result {
+  width: 80%;
+  margin: 25px auto;
+}
+
+
+.blue {
+  color: red;
+}
+
+.an_notes {
+  width: 50%;
+  float:left;
+}
